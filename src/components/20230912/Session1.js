@@ -24,7 +24,7 @@ const Bigbox2 = styled.div`
 const Bigbox3 = styled.div`
   width: 80%;
   height: 150px;
-  background-color: ${(props) => (props.active ? blue : red)};
+  background-color: ${(props) => (props.active ? "blue" : "red")};
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

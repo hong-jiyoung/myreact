@@ -6,9 +6,13 @@ const Container = styled.div`
   text-align: center;
 `;
 
-const Title = styled.h3`
+const Title = styled.h1`
   font-size: 2.5rem;
-  color: pink;
+  color: ${(props) => (props.isActive ? "orange" : props.fontColor)};
+`;
+
+const TitleBlue = styled(Title)`
+  color: "blue";
 `;
 
 const Photo = styled.img`
@@ -39,7 +43,10 @@ export function List() {
         ))}
       </u1>
       <Container>
-        <Title>{user.name}</Title>
+        <Title fontColor="green" isActive={false}>
+          {user.name}
+        </Title>
+
         <Photo src={user.imageUrl} />
       </Container>
       {/* <wrapper>
