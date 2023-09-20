@@ -59,7 +59,7 @@ export function OpenWeather({ cityName }) {
   useEffect(() => {
     if (cityName) {
       // 닌자한테 해당 도시의 위도, 경도를 요청
-      const urlToNinja = `https://api.api-ninjas.com/v1/city?name= ${cityName}`;
+      const urlToNinja = `https://api.api-ninjas.com/v1/city?name=${cityName}`;
       fetch(urlToNinja, {
         headers: {
           "X-API-Key": API_KEY_NINJA,
